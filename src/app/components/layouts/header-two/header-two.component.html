@@ -1,0 +1,146 @@
+<!-- Start Header -->
+<header class="header header-2">
+    <!-- navigation -->
+    <div class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-nav">
+                        <nav>
+                            <ul class="custom-flex main-menu">
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Home</a>
+                                    <ul class="custom sub-menu">
+                                        <li class="menu-item">
+                                            <a routerLink='/' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Homepage 1</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/home-two' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Homepage 2</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/home-three' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Homepage 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a routerLink='/about' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Services</a>
+                                    <ul class="custom sub-menu">
+                                        <li class="menu-item">
+                                            <a routerLink='/service-1' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Service 1</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/service-2' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Service 2</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/service-detail' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Service Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">Pages</a>
+                                    <ul class="custom sub-menu">
+                                        <li class="menu-item">
+                                            <a routerLink='/shop' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Shop</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/shop-detail' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Shop Detail</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/portfolio-1' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Portfolio 1</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/portfolio-2' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Portfolio 2</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/project-detail' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Project Detail</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/team' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Team</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/careers' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Careers</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#">News</a>
+                                    <ul class="custom sub-menu">
+                                        <li class="menu-item">
+                                            <a routerLink='/news-grid' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">News Grid</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/news-standard' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">News Standard</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a routerLink='/news-detail' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">News Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a routerLink='/contact' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="nav-right">
+                            <ul class="custom-flex">
+                                <li>
+                                    <a href="#">
+                                        <i class="fal fa-user"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fal fa-shopping-cart"></i>
+                                    </a>
+                                </li>
+                                <li class="search">
+                                    <a href="#">
+                                        <i class="fal fa-search"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-popup" id="search-popup">
+            <form action="#" class="search-form">
+                <div class="input-group">
+                    <input type="text" name="#" class="form-control form-control-custom" placeholder="Search">
+                    <div class="input-group-prepend">
+                        <button type="submit" class="theme-btn"><i class="fal fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="body-overlay" id="body-overlay"></div>
+    </div>
+    <!-- Mobile header -->
+    <div class="mobile-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-header-wrap">
+                        <div class="logo">
+                            <a routerLink='/'>
+                                <img src="assets/images/logo.png" class="image-fit" alt="">
+                            </a>
+                        </div>
+                        <div class="hamburger-btn">
+                            <div class="menu-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header -->

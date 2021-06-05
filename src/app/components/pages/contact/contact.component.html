@@ -1,0 +1,130 @@
+<app-header-one></app-header-one>
+<!-- Start Subheader -->
+<div class="normal-bg subheader" style="background-image: url('assets/images/subheader.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="subheader-content">
+                    <h1 class="page-title text-custom-white fw-600">Get In Touch</h1>
+                    <ul class="custom-flex breadcrumb">
+                        <li><a routerLink='/'>Home</a></li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Subheader -->
+<!-- Start contact form -->
+<section class="section-padding-top">
+    <div class="container">
+        <div class="col-12">
+            <div class="contact-form">
+                <form (submit)="sendEmail($event)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group group-form">
+                                <input type="text" name="from_name" class="form-control form-control-custom" placeholder="Your full name"/>
+                                <span class="icon">
+                                    <i class="fal fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group group-form">
+                                <input type="email" name="to_email" class="form-control form-control-custom" placeholder="Enter email address"/>
+                                <span class="icon">
+                                    <i class="fal fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group group-form">
+                                <input type="text" name="to_phone" class="form-control form-control-custom" placeholder="Add phone number"/>
+                                <span class="icon">
+                                    <i class="fal fa-phone-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group group-form">
+                                <select class="form-control form-control-custom" name="to_subject">
+                                    <option>Select Subject</option>
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                </select>
+                                <span class="icon">
+                                    <i class="fal fa-book"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group group-form">
+                                <textarea name="message_html" class="form-control form-control-custom"></textarea>
+                                <span class="icon">
+                                    <i class="fal fa-pencil-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="theme-btn btn-orange">Get Free Consultacy</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End contact form -->
+<!-- Start Map -->
+<div class="contact-map">
+    <iframe title="contact map" class="image-fit" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+</div>
+<!-- Start Map -->
+<!-- Start contact detail -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-heading">
+                <h6 class="text-orange mb-xl-10 sub-heading"><span>Contact</span></h6>
+                <h3 class="text-blue fw-700 title">Catch us here also<span class="text-orange">.</span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-box mb-md-30">
+                    <div class="icon text-orange">
+                        <i class="fal fa-map"></i>
+                    </div>
+                    <h3 class="fw-600">Office Address</h3>
+                    <a href="#" class="fw-500 fs-16">99 NY Address street, Brooklyn, United State</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-box mb-md-30">
+                    <div class="icon text-orange">
+                        <i class="fal fa-phone"></i>
+                    </div>
+                    <h3 class="fw-600">Phone Number</h3>
+                    <a href="tel:" class="fw-500 fs-16">875 7556 464 765 8</a>
+                    <a href="tel:" class="fw-500 fs-16">765 648 567 98</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="contact-info-box">
+                    <div class="icon text-orange">
+                        <i class="fal fa-globe"></i>
+                    </div>
+                    <h3 class="fw-600">Web Connect</h3>
+                    <a href="mailto:" class="fw-500 fs-16">info@webmail.com</a>
+                    <a href="#" class="fw-500 fs-16">webexample.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End contact detail -->
+<app-footer-one></app-footer-one>

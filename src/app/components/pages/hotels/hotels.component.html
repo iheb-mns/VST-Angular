@@ -1,0 +1,73 @@
+<app-header-one></app-header-one>
+<!-- Start Subheader -->
+<div
+  class="normal-bg subheader"
+  style="background-image: url('assets/images/hotel1.jpg')"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="subheader-content">
+          <h1 class="page-title text-custom-white fw-600">Hôtels</h1>
+          <ul class="custom-flex breadcrumb">
+            <li><a routerLink="/">Accueil</a></li>
+            <li>Hôtels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Subheader -->
+<!-- Start Blog -->
+<section class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="section-header">
+        <div class="section-heading">
+          <h3 class="text-blue fw-700 title">
+            Choisissez votre hôtel<span class="text-orange">.</span>
+          </h3>
+        </div>
+      </div>
+
+      <!-- Start Services -->
+      <section class="section-padding" >
+        <div class="container" >
+          <div class="row">        
+
+            <div class="col-lg-4 col-md-6" *ngFor="let h of hotels">
+              <div class="service-block-3 mb-xl-30">
+                <div class="service-image animate-img">
+                  <img
+                    src="assets/images/service-5.jpg"
+                    class="image-fit"
+                    alt=""
+                  />
+                </div>
+                <div class="service-caption">
+                  <div class="left-side">
+                    <p class="text-orange double-lines fw-600 mb-1 fs-16">
+                      <span>Web</span>
+                    </p>
+                    <h4 class="fw-600 no-margin">
+                      <a routerLink="/hotel-details/{{ h.id }}">{{ h.name }}</a>
+                    </h4>
+                  </div>
+                  <a routerLink="/hotel-details/{{ h.id }}" class="block-btn">
+                    <i class="fal fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End Services -->
+    </div>
+  </div>
+</section>
+<!-- End Blog -->
+<!-- End News -->
+<app-footer-three></app-footer-three>
