@@ -11,6 +11,7 @@ module.exports = app => {
   
     // Find available Hotels
     router.get("/available", hotels.findAvailable);
+    router.get("/countHotels", hotels.countHotels);
   
     // Retrieve a single Hotel with id
     router.get("/:id", hotels.findOne);
@@ -23,6 +24,9 @@ module.exports = app => {
   
     // Delete all Hotel
     router.delete("/", hotels.deleteAll);
+
+    // Count Hotels
+    //router.get("/availablee", hotels.findAvailablee);
   
     app.use('/api/hotels', router);
   };

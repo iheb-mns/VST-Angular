@@ -90,7 +90,7 @@
                     <!-- shop title -->
                     <div class="top-head">
                         <p class="text-orange fw-500 mb-xl-10"> <i class="fal fa-map-marker-alt"></i>
-                            <span> Sousse</span>
+                            <span> {{currentHotel.address}}</span>
                         </p>
                         <h3 class="fw-700 title"><a href="#">{{currentHotel.name}}</a></h3>
                     </div>
@@ -112,11 +112,7 @@
                         </div>
                     </div>
                     <!-- Shop description -->
-                    <p class="fw-500">Sweet as can be, the darling Lucy Love Sophia Rust Red Embroidered Dress is here
-                        to brighten your day! Slender straps support the apron neckline of this gauzy, woven dress
-                        bedecked in floral embroidery. Sheath silhouette ends at a mini hem. Sleek, polished, and
-                        boasting an impeccably modern fit, this blue, 2-button Lazio suit features a notch lapel, flap
-                        pockets, and accompanying flat front trousers—all in pure wool by Vitale Barberis Canonico.</p>
+                    <p class="fw-500">{{currentHotel.description}}</p>
                     <!-- shop meta -->
                     <ul class="custom shop-meta">
                         <li><strong>Disponibilité:</strong> Valable</li>
@@ -126,24 +122,22 @@
                         <div class="row justify-content-center">
                             <div class="col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <h6 class="fw-600 mb-xl-10">Color</h6>
-                                    <select id="cars" name="cars">
-                                        <option value="volvo">Volvo XC90</option>
-                                        <option value="saab">Saab 95</option>
-                                        <option value="mercedes">Mercedes SLK</option>
-                                        <option value="audi">Audi TT</option>
+                                    <h6 class="fw-600 mb-xl-10">Personnes</h6>
+                                    <select class="custom-select select-style-2" id="cars" name="cars">
+                                        <option value="volvo">1</option>
+                                        <option value="saab">2</option>
+                                        <option value="mercedes">3</option>
+                                        <option value="audi">4</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
-                                <h6 class="fw-600 mb-xl-10">Size</h6>
+                                <h6 class="fw-600 mb-xl-10">Type de logement</h6>
                                 <div class="form-group">
                                     <select class="custom-select select-style-2">
-                                        <option>Select size</option>
-                                        <option>XL</option>
-                                        <option>XLS</option>
-                                        <option>LG</option>
-                                        <option>MD</option>
+                                        <option>Chambre Double</option>
+                                        <option>Chambre Triple</option>
+                                        <option>Appartement 2 Chambres</option>
                                     </select>
                                 </div>
                             </div>

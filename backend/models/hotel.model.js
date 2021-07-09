@@ -1,16 +1,17 @@
 module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
+      id: String,
       name: String,
+      city: String,
       address: String,
       description: String,
-      stars: Number,
-      phone: Number,
-      roomsNumber: Number,
-      minPrice: Number,
-      maxPrice: Number,
-      available: Boolean,
-      rooms: [{type: mongoose.Schema.Types.ObjectId, ref: 'room'}]
+      stars: String,
+      phone: String,
+      roomsNumber: String,
+      minPrice: String,
+      maxPrice: String,
+      available: String,
     },
     { timestamps: true }
   );

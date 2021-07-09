@@ -12,6 +12,7 @@ exports.create = (req, res) => {
   // Create a Hotel
   const hotel = new Hotel({
     name: req.body.name,
+    city: req.body.city,
     address: req.body.address,
     description: req.body.description,
     stars: req.body.stars,
@@ -145,3 +146,25 @@ exports.findAvailable = (req, res) => {
       });
     });
 };
+
+
+//Count Hotels 
+exports.countHotels = (req, res) => {
+  Hotel.countDocuments()
+  .then((data) => {
+    //res.sendStatus(data.statusCode);
+    res.send({
+      hotel: `${data}`,
+    });
+  })
+
+  .catch((err) => {
+    res.status(500).send({
+      message: err.message || "Some error occurred while retrieving hotels.",
+    });
+  });
+      
+
+};
+
+    

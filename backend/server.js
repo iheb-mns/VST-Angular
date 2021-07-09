@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 
+const auth = require('./routes/auth.routes');
+
 //var corsOptions = {
 //  origin: "http://localhost:8081"
 //};
@@ -16,8 +18,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 require("../backend/routes/hotel.routes")(app);
-require("../backend/routes/room.routes")(app);
+require("../backend/routes/booking.routes")(app);
 
+//require("../backend/routes/auth.routes")(app);
+app.use('/auth', auth)
 
 
 //mongo
