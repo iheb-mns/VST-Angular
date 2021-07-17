@@ -21,7 +21,6 @@ exports.create = (req, res) => {
     minPrice: req.body.minPrice,
     maxPrice: req.body.maxPrice,
     available: req.body.available,
-
   });
 
   // Save Hotel in the database
@@ -74,23 +73,23 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
   if (!req.body) {
     return res.status(400).send({
-      message: "Data to update can not be empty!"
+      message: "Data to update can not be empty!",
     });
   }
 
   const id = req.params.id;
 
   Hotel.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
-    .then(data => {
+    .then((data) => {
       if (!data) {
         res.status(404).send({
-          message: `Cannot update Hotel with id=${id}. Maybe Hotel was not found!`
+          message: `Cannot update Hotel with id=${id}. Maybe Hotel was not found!`,
         });
       } else res.send({ message: "Hotel was updated successfully." });
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
-        message: "Error updating Hotel with id=" + id
+        message: "Error updating Hotel with id=" + id,
       });
     });
 };
@@ -99,20 +98,20 @@ exports.delete = (req, res) => {
   const id = req.params.id;
 
   Hotel.findByIdAndRemove(id)
-    .then(data => {
+    .then((data) => {
       if (!data) {
         res.status(404).send({
-          message: `Cannot delete Hotel with id=${id}. Maybe Hotel was not found!`
+          message: `Cannot delete Hotel with id=${id}. Maybe Hotel was not found!`,
         });
       } else {
         res.send({
-          message: "Hotel was deleted successfully!"
+          message: "Hotel was deleted successfully!",
         });
       }
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
-        message: "Could not delete Hotel with id=" + id
+        message: "Could not delete Hotel with id=" + id,
       });
     });
 };
@@ -136,35 +135,29 @@ exports.deleteAll = (req, res) => {
 // Find available Hotels
 exports.findAvailable = (req, res) => {
   Hotel.find({ available: true })
-    .then(data => {
+    .then((data) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving hotels."
+        message: err.message || "Some error occurred while retrieving hotels.",
       });
     });
 };
 
-
-//Count Hotels 
+//Count Hotels
 exports.countHotels = (req, res) => {
   Hotel.countDocuments()
-  .then((data) => {
-    //res.sendStatus(data.statusCode);
-    res.send({
-      hotel: `${data}`,
-    });
-  })
+    .then((data) => {
+      //res.sendStatus(data.statusCode);
+      res.send({
+        hotel: `${data}`,
+      });
+    })
 
-  .catch((err) => {
-    res.status(500).send({
-      message: err.message || "Some error occurred while retrieving hotels.",
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || "Some error occurred while retrieving hotels.",
+      });
     });
-  });
-      
-
 };
-
-    

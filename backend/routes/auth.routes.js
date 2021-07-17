@@ -143,4 +143,19 @@ router.route('/delete-user/:id').delete((req, res, next) => {
     })
 })
 
+// Count Users
+router.route('/countUsers').get((req, res) => {
+    userSchema.countDocuments().then((data) => {
+        //res.sendStatus(data.statusCode);
+        res.send({
+          user: `${data}`,
+        });
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message: err.message || "Some error occurred while retrieving users.",
+        });
+      });
+})
+
 module.exports = router;

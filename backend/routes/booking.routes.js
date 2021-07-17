@@ -1,19 +1,25 @@
-module.exports = app => {
-    const bookings = require("../controllers/booking.controller.js");
-  
-    var router = require("express").Router();
-  
-    // Create a new Booking
-    router.post("/", bookings.create);
+module.exports = (app) => {
+  const bookings = require("../controllers/booking.controller.js");
 
-    // Retrieve all Bookings
-    router.get("/", bookings.findAll);
+  var router = require("express").Router();
 
-    // Accept
-    router.put("/accept/:id", bookings.accept);
+  // Create a new Booking
+  router.post("/", bookings.create);
 
-    // Decline
-     router.put("/decline/:id", bookings.decline);
+  // Retrieve all Bookings
+  router.get("/", bookings.findAll);
 
-    app.use('/api/bookings', router);
-  };
+    // Retrieve Booking by User ID
+    router.get("/:id", bookings.findOne);
+
+  // Count Bookings
+  router.get("/countBookings", bookings.countBookings);
+
+  // Accept
+  router.put("/accept/:id", bookings.accept);
+
+  // Decline
+  router.put("/decline/:id", bookings.decline);
+
+  app.use("/api/bookings", router);
+};

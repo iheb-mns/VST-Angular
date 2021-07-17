@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from '../app/http-interceptors/authconfig.interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +39,9 @@ import { HotelDetailsComponent } from './components/pages/hotel-details/hotel-de
 import { HotelsComponent } from './components/pages/hotels/hotels.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { TestpageComponent } from './components/pages/testpage/testpage.component';
+import { SigninComponent } from './components/pages/signin/signin.component';
+import { SignupComponent } from './components/pages/signup/signup.component';
+import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -72,16 +78,26 @@ import { TestpageComponent } from './components/pages/testpage/testpage.componen
     HotelsComponent,
     HomePageComponent,
     TestpageComponent,
+    SigninComponent,
+    SignupComponent,
+    UserProfileComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
   providers: [
       Location, {
-        provide: LocationStrategy,
-        useClass: PathLocationStrategy
+        provide: LocationStrategy, 
+        useClass: PathLocationStrategy, 
+      },
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthInterceptor,
+        multi: true
       }
   ],
   bootstrap: [AppComponent]

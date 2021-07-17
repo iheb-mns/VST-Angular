@@ -9,7 +9,7 @@ module.exports = (mongoose) => {
         checkOutDate: Date,
         status: String,
         hotel: { type: mongoose.Schema.Types.ObjectId, ref: "hotel" },
-        user: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
+        user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
       },
       { timestamps: true }
     );

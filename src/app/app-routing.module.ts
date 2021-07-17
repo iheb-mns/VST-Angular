@@ -23,10 +23,14 @@ import { HotelDetailsComponent } from './components/pages/hotel-details/hotel-de
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { TestpageComponent } from './components/pages/testpage/testpage.component';
 
+import { SigninComponent } from './components/pages/signin/signin.component';
+import { AuthGuard } from "../app/helpers/shared/auth.guard";
+
+
 
 
 const routes: Routes = [
-  {path:'',component:HomePageComponent},
+  {path:'',component:HomePageComponent, canActivate: [AuthGuard]},
   {path:'home-two',component:HomeTwoComponent},
   {path:'home-three',component:HomeThreeComponent},
   {path:'about',component:AboutComponent},
@@ -48,6 +52,9 @@ const routes: Routes = [
   {path:'hotel-details/:id',component:HotelDetailsComponent},
   {path:'home',component:HomePageComponent},
   {path:'test',component:TestpageComponent},
+
+  { path: "log-in", component: SigninComponent },
+
 
 
 
